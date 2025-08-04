@@ -49,7 +49,7 @@ void loop() {
   Serial.printf("ADC Value: %d, Voltage: %.3f V\n", adcValue, voltage);
 
   Serial.println(url);
-  String jsonData = String("{\"Time\": \") + timestring +String(\", \"Voltage\":")+String(voltage)+String("}");
+  String jsonData = String("{\"Time\": \"") + timestring +String("\", \"Voltage\":")+String(voltage)+String("}");
   int httpResponseCode = http.POST(jsonData);
 
   Serial.println(jsonData);
